@@ -7,8 +7,10 @@ import java.util.UUID;
 
 public class UserManager {
     private final List<User> users = new ArrayList<>();
-    public List<String> userNames = new ArrayList<>();
-    public List<String> emails = new ArrayList<>();
+    private final List<String> userNames = new ArrayList<>();
+    private final List<String> emails = new ArrayList<>();
+
+    Scanner scanner = new Scanner(System.in);
 
     public void addUser(User user) {
         if (isEmailExist(user.getEmail()) | isUserNameExist(user.getUserName())) {
@@ -20,19 +22,19 @@ public class UserManager {
         users.add(user);
     }
 
-    public List<User> allUsers() {
-        return users;
-    }
-
     public void listUsers() {
+        System.out.println("\n========================================================================= " +
+                "KULLANICILAR " +
+                "=========================================================================");
         for (User user : users) {
-            System.out.println(user.toString());
+            System.out.println(user);
         }
+        System.out.println("============================================================================" +
+                "=====================================================================================\n");
     }
 
     public void createAccount() {
         System.out.println("\n\t\t****** Kayıt Ekranı ******");
-        Scanner scanner = new Scanner(System.in);
         User user = new User();
         user.setId(UUID.randomUUID().toString());
         System.out.print("\t\tAdınız: ");
@@ -68,33 +70,62 @@ public class UserManager {
         //System.out.println("\t\t**************************\n");
     }
 
-    public boolean removeAccount(String id) {
+    public User login() {
+
+        System.out.println("\t\t****** Kullanıcı Girişi ******");
+
+        System.out.print("\t\tKullanıcı adınız: ");
+        String userName = scanner.nextLine();
+
+        System.out.print("\t\tŞifreniz: ");
+        String password = scanner.nextLine();
+
         for (User user : users) {
-            if (user.getId().equals(id)) {
+            if (user.getUserName().equals(userName) && user.getPassword().equals(password)) {
+                return user;
+            }
+        }
+        return null;
+    }
+
+    public void removeAccount() {
+        System.out.print("Kullanıcı id' sini giriniz: ");
+        String id = scanner.nextLine();
+
+        for (User user : users) {
+            if (user.getId().equals(id) && !user.getUserName().equals("zeyn-app")) {
                 users.remove(user);
-                return true;
+                System.out.println("İşlem Başarılı");
+                return;
             }
         }
-        return false;
+        System.out.println("İşlem Başarısız");
     }
 
-    public String searchAccountById(String id) {
+    public void searchAccountById() {
+        System.out.print("Kullanıcı Id Giriniz: ");
+        String id = scanner.nextLine();
         for (User user : users) {
             if (user.getId().equals(id)) {
-                return user.toString();
+                System.out.println("\n" + user + "\n");
+                return;
             }
         }
-        return null;
+        System.out.println("Kullanıcı Bulunamadı\n");
     }
 
-    public String searchAccountByName(String fullName) {
+    public void searchAccountByName() {
+        System.out.print("Kullanıcı Adını Giriniz: ");
+        String fullName = scanner.nextLine();
+
         for (User user : users) {
-            String nameAndSurname = user.getName() + user.getSurname();
+            String nameAndSurname = user.getName() + " " + user.getSurname();
             if (nameAndSurname.contains(fullName)) {
-                return user.toString();
+                System.out.println("\n" + user + "\n");
+                return;
             }
         }
-        return null;
+        System.out.println("Kullanıcı Bulunamadı\n");
     }
 
     public boolean isEmailExist(String email) {
@@ -111,7 +142,7 @@ public class UserManager {
         return false;
     }
 
-    public void initUsers(){
+    public void initUsers() {
         User user1 = new User("Cihan", "Korkmaz", "chnkrkmz", "1245", "chnkrkmz@gmail.com");
         User user2 = new User("Ece", "Gören", "ecegoren", "124*5", "ecegoren@gmail.com");
         User user3 = new User("Hasan", "Akkoyun", "hsnkk", "1#245", "hsnkk@gmail.com");

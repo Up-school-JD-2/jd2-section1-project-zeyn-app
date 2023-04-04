@@ -5,80 +5,89 @@ import java.util.*;
 public class FilmManager {
     private final List<Film> films = new ArrayList<>();
 
+    Scanner scanner = new Scanner(System.in);
+
     public void add(Film film) {
         films.add(film);
     }
 
-    /*
-    id +
-                ", title='" + title + '\'' +
-                ", director=" + director +
-                ", actors=" + actors +
-                ", date=" + date +
-                ", description='" + description + '\'' +
-                ", type='" + type + '\'' +
-                '}';
-     */
-
     public void newFilm() {
-        Scanner scanner = new Scanner(System.in);
+        System.out.println("\n\t\t****** Film Ekle ******");
 
         String actor;
         List<String> actors = new ArrayList<>();
 
-        System.out.print("Film Adı: ");
+        System.out.print("\t\tFilm Adı: ");
         String title = scanner.nextLine();
-        System.out.print("Yönetmen: ");
+        System.out.print("\t\tYönetmen: ");
         String director = scanner.nextLine();
 
-        System.out.print("Oyuncu sayısını giriniz: ");
+        System.out.print("\t\tOyuncu sayısını giriniz: ");
         int countOfActors = scanner.nextInt();
-        scanner.next();
+        scanner.nextLine();
         for (int i = 0; i < countOfActors; i++) {
-            System.out.print(i + 1 + ". oyuncu Adı: ");
+            System.out.print("\t\t" + (i + 1) + ". oyuncu Adı: ");
             actor = scanner.nextLine();
             actors.add(actor);
         }
 
-        System.out.print("Yıl: ");
+        System.out.print("\t\tYıl: ");
         String year = scanner.nextLine();
-        System.out.print("Açıklama: ");
+        System.out.print("\t\tAçıklama: ");
         String description = scanner.nextLine();
 
         Film film = new Film(title, director, actors, year, description, FilmType.USER_DEFINED);
         films.add(film);
+
+        System.out.println("\t\t***********************\n");
     }
 
     public void listFilm() {
+        System.out.println("\n========================================================================= " +
+                "FİLMLER " +
+                "=========================================================================");
         for (Film film : films) {
             System.out.println(film.toString());
         }
+        System.out.println("============================================================================" +
+                "=====================================================================================\n");
     }
 
-    public boolean removeByID(String id) {
+    public void remove() {
+        System.out.print("Film id' sini giriniz: ");
+        String id = scanner.nextLine();
         for (Film film : films) {
             if (film.getId().equals(id)) {
-                films.remove(id);
-                return true;
+                films.remove(film);
+                System.out.println("İşlem Başarılı");
+                return;
             }
         }
-        return false;
+        System.out.println("İşlem Başarısız");
     }
 
-    public Film searchFilmByName(String name) {
+    public void searchFilmByName() {
+        System.out.print("Film Adını Giriniz: ");
+        String name = scanner.nextLine();
         for (Film film : films) {
             if (film.getTitle().contains(name)) {
-                return film;
+                System.out.println("\n" + film + "\n");
+                return;
             }
         }
-        return null;
+        System.out.println("Aradığınız Film Bulunamadı\n");
     }
 
-    public Film searchFilmById(String id) {
+    public void searchFilmById() {
+        System.out.print("Film Id Giriniz: ");
+        String id = scanner.nextLine();
         for (Film film : films) {
-            if (film.getId().equals(id)) return film;
+            if (film.getId().equals(id)) {
+                System.out.println("\n" + film + "\n");
+                return;
+            }
         }
-        return null;
+        System.out.println("Aradığınız Film Bulunamadı\n");
     }
 
     public void initFilms() {
