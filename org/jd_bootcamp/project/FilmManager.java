@@ -35,8 +35,18 @@ public class FilmManager {
         String year = scanner.nextLine();
         System.out.print("\t\tAçıklama: ");
         String description = scanner.nextLine();
+        System.out.print("\t\tType: (HISTORY, DRAMA, CRIME, ACTION, ADVENTURE, SCI_FI, BIOGRAPHY, WESTERN)");
+        String type = scanner.nextLine();
+        FilmType fType = null;
 
-        Film film = new Film(title, director, actors, year, description, FilmType.USER_DEFINED);
+        for (FilmType filmType : FilmType.values()) {
+            if (type.equalsIgnoreCase(filmType.toString())) {
+                fType = filmType;
+                break;
+            }
+        }
+
+        Film film = new Film(title, director, actors, year, description, fType);
         films.add(film);
 
         System.out.println("\t\t***********************\n");
