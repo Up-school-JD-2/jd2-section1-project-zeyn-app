@@ -46,15 +46,13 @@ public class Film {
 
     @Override
     public String toString() {
-        return "Film{" +
-                "id=" + id +
-                ", title='" + title + '\'' +
-                ", director=" + director +
-                ", actors=" + actors +
-                ", date=" + date +
-                ", description='" + description + '\'' +
-                ", type='" + type + '\'' +
-                '}';
+        return  "\n\tID = " + id +
+                "\n\tTitle = '" + title + '\'' +
+                "\n\tDirector = " + director +
+                "\n\tActors = " + actors +
+                "\n\tDate = " + date +
+                "\n\tDescription = '" + description + '\'' +
+                "\n\tType = '" + type + '\'' + "\n";
     }
 
     @Override

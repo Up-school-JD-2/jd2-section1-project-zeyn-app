@@ -89,6 +89,7 @@ public class Menu {
                                     filmManager.remove();
                                     break;
                                 case "9": // log out
+                                    System.out.println();
                                     break innerLoop;
                                 case "10": // terminate
                                     System.out.println(".........Program Sonlandırıldı.........");
@@ -129,6 +130,7 @@ public class Menu {
                                     filmManager.remove();
                                     break;
                                 case "5": // log out
+                                    System.out.println();
                                     break innerLoop2;
                                 case "6": // terminate
                                     System.out.println(".........Program Sonlandırıldı.........");

@@ -80,14 +80,12 @@ public class User {
 
     @Override
     public String toString() {
-        return "User{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", surname='" + surname + '\'' +
-                ", userName='" + userName + '\'' +
-                ", password='" + password + '\'' +
-                ", email='" + email + '\'' +
-                '}';
+        return "\n\t\tId = " + id +
+                "\n\t\tName = '" + name + '\'' +
+                "\n\t\tSurname = '" + surname + '\'' +
+                "\n\t\tUserName='" + userName + '\'' +
+                "\n\t\tPassword='" + password + '\'' +
+                "\n\t\tEmail='" + email + '\'' + "\n";
     }
 
     @Override
