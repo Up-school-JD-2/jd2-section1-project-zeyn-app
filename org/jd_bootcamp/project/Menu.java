@@ -1,5 +1,9 @@
 package org.jd_bootcamp.project;
 
+import org.jd_bootcamp.project.film.FilmManager;
+import org.jd_bootcamp.project.user.User;
+import org.jd_bootcamp.project.user.UserManager;
+
 import java.util.Scanner;
 
 public class Menu {

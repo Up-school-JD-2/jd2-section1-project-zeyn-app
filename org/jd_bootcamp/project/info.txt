@@ -1,0 +1,11 @@
+
+- Kullanıcı adı ve email adresi unique değerler olmalıdır, aynı isimde birden fazla kullanıcı adı veya email adresi tanımlanamamalıdır.
+
+- Kullanıcı, admin ise kullanıcı ve film işlemlerini gerçekleştirebilecek; ancak admin değilse sadece film işlemlerini gerçekleştirebilecektir.
+
+- Kullanıcı, email adresi veya kullanıcı adı ile giriş yapabilmelidir.
+
+Admin' e ait bilgiler aşağıda verilmektedir.
+  Kullanıcı adı = zeyn-app
+  Email = zeynepozdemir@gmail.com
+  Password = 123456

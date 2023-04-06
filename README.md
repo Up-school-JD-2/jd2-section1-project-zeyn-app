@@ -20,17 +20,4 @@ Dikkat edilmesi gerekenler:
 - Gereksiz nesne referansı oluşturmaktan kaçının, 1 kez kullanabileceğiniz bir Scanner sınıfını bir for içerisinde sürekli initialize etmeyin.
 - Şimdiye kadar kullanmadığımız bir yapıyı projeye dahil etmeyin.
 
-09.04.2023 23:00 a kadar vaktiniz vardır. Birbirinizden yardım alabilirsiniz fakat bire bir aynı kodları göndermeyin.
-<br>
----
-Kullanıcı adı ve email adresi ***unique*** değerler olmalıdır, aynı isimde birden fazla kullanıcı adı veya email adresi tanımlanamamalıdır.
-
-Kullanıcı, ***admin*** ise kullanıcı ve film işlemlerini gerçekleştirebilecek; ancak admin değilse sadece film işlemlerini gerçekleştirebilecektir. </i>
-
-Kullanıcı, email adresi veya kullanıcı adı ile giriş yapabilmelidir.
-Admin' e ait bilgiler aşağıda verilmektedir.
-
-> Kullanıcı adı = <i>zeyn-app</i><br>
-> Email = <i>zeynepozdemir@gmail.com</i><br>
-> Password = <i>123456</i>
-
+ 09.04.2023 23:00 a kadar vaktiniz vardır. Birbirinizden yardım alabilirsiniz fakat bire bir aynı kodları göndermeyin.

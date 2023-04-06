@@ -1,4 +1,4 @@
-package org.jd_bootcamp.project;
+package org.jd_bootcamp.project.user;
 
 import java.util.Objects;
 import java.util.UUID;
