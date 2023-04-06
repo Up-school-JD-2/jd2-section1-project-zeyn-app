@@ -178,14 +178,14 @@ public class FilmManager {
         Film film9 = new Film("Back to the Future", "Robert Zemeckis", actors9, "1985", "Marty McFly, a 17-year-old high school student, is accidentally sent 30 years into the past in a time-traveling DeLorean invented by his close friend, the maverick scientist Doc Brown.", FilmType.ADVENTURE);
         film9.setId(UUID.randomUUID().toString());
 
-        /*films.add(film1);
+        films.add(film1);
         films.add(film2);
         films.add(film3);
         films.add(film4);
         films.add(film5);
         films.add(film6);
         films.add(film7);
-        films.add(film8);*/
+        films.add(film8);
         films.add(film9);
     }
 }
