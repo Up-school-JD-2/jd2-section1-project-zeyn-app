@@ -23,6 +23,10 @@ public class UserManager {
     }
 
     public void listUsers() {
+        if(users.isEmpty()) {
+            System.out.println("\n\t\tHerhangi Bir Kayıt Bulunamadı.\n");
+            return;
+        }
         System.out.println("\n========================================================================= " +
                 "KULLANICILAR " +
                 "=========================================================================");
@@ -74,14 +78,14 @@ public class UserManager {
 
         System.out.println("\t\t****** Kullanıcı Girişi ******");
 
-        System.out.print("\t\tKullanıcı adınız: ");
-        String userName = scanner.nextLine();
+        System.out.print("\t\tKullanıcı Adınız veya Email Adresiniz: ");
+        String userNameOrEmail = scanner.nextLine();
 
         System.out.print("\t\tŞifreniz: ");
         String password = scanner.nextLine();
 
         for (User user : users) {
-            if (user.getUserName().equals(userName) && user.getPassword().equals(password)) {
+            if ((user.getUserName().equals(userNameOrEmail) && user.getPassword().equals(password)) || (user.getEmail().equals(userNameOrEmail) && user.getPassword().equals(password))) {
                 return user;
             }
         }
@@ -115,7 +119,7 @@ public class UserManager {
     }
 
     public void searchAccountByName() {
-        System.out.print("Kullanıcı Adını Giriniz: ");
+        System.out.print("Kullanıcının Adını ve Soyadını Giriniz: ");
         String fullName = scanner.nextLine();
 
         for (User user : users) {
