@@ -11,6 +11,7 @@
 
 
 
+
 Dikkat edilmesi gerekenler:
 
 - Gerekli gördüğünüz yerde sınıf içerisine çok fazla olmamak şartıyla variable eklemesi yapabilirsiniz.
@@ -19,4 +20,13 @@ Dikkat edilmesi gerekenler:
 - Gereksiz nesne referansı oluşturmaktan kaçının, 1 kez kullanabileceğiniz bir Scanner sınıfını bir for içerisinde sürekli initialize etmeyin.
 - Şimdiye kadar kullanmadığımız bir yapıyı projeye dahil etmeyin.
 
-09.03.2023 23:00 a kadar vaktiniz vardır. Birbirinizden yardım alabilirsiniz fakat bire bir aynı kodları göndermeyin.
+09.04.2023 23:00 a kadar vaktiniz vardır. Birbirinizden yardım alabilirsiniz fakat bire bir aynı kodları göndermeyin.
+<br><br>###############################################################################<br><br>
+<i> Kullanıcı admin ise kullanıcı ve film işlemleri gerçekleştirebilecek; ancak admin değilse sadece film işlemlerini gerçekleştirebilecek. </i>
+
+Admin' e ait bilgiler: 
+- Kullanıcı adı = zeyn-app
+- Email = zeynepozdemir@gmail.com
+- Password = 123456
+
+<i> Ayrıca kullanıcı adı ve email unique değerler olmalıdır, kullanıcı email veya kullanıcı adı ile giriş yapabilmelidir.</i>

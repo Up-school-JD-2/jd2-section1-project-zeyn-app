@@ -21,12 +21,17 @@ Dikkat edilmesi gerekenler:
 - Şimdiye kadar kullanmadığımız bir yapıyı projeye dahil etmeyin.
 
 09.04.2023 23:00 a kadar vaktiniz vardır. Birbirinizden yardım alabilirsiniz fakat bire bir aynı kodları göndermeyin.
-<br><br>###############################################################################<br><br>
-<i> Kullanıcı admin ise kullanıcı ve film işlemleri gerçekleştirebilecek; ancak admin değilse sadece film işlemlerini gerçekleştirebilecek. </i>
+<br>
+---
+Kullanıcı adı ve email ***unique*** değerler olmalıdır, aynı isimde birden fazla kullanıcı adı veya email tanımlanmamalıdır.
+
+Kullanıcı, email veya kullanıcı adı ile giriş yapabilmelidir.
+
+Kullanıcı, admin ise kullanıcı ve film işlemlerini gerçekleştirebilecek; ancak admin değilse sadece film işlemlerini gerçekleştirebilecektir. </i>
 
 Admin' e ait bilgiler: 
-- Kullanıcı adı = zeyn-app
-- Email = zeynepozdemir@gmail.com
-- Password = 123456
 
-<i> Ayrıca kullanıcı adı ve email unique değerler olmalıdır, kullanıcı email veya kullanıcı adı ile giriş yapabilmelidir.</i>
+> Kullanıcı adı = <i>zeyn-app</i><br>
+> Email = <i>zeynepozdemir@gmail.com</i><br>
+> Password = <i>123456</i>
+
