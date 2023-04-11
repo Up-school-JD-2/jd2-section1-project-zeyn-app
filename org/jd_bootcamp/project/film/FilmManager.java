@@ -105,11 +105,11 @@ public class FilmManager {
     }
 
     public void initFilms() {
-        List<String> actors1 = new ArrayList<>();
-        actors1.add("Tim Robbins");
+        List<String> actors1 = new ArrayList<>(Arrays.asList("Tim Robbins", "Morgan Freeman", "Bob Gunton", "William Sadler"));
+        /*actors1.add("Tim Robbins");
         actors1.add("Morgan Freeman");
         actors1.add("Bob Gunton");
-        actors1.add("William Sadler");
+        actors1.add("William Sadler");*/// :( Devamı daha sonra düzeltilecektir.
         Film film1 = new Film("The Shawshank Redemption", "Frank Darabont", actors1, "1994", "Over the course of several years, two convicts form a friendship, seeking consolation and, eventually, redemption through basic compassion.", FilmType.DRAMA);
 
         List<String> actors2 = new ArrayList<>();
